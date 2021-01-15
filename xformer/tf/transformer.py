@@ -148,7 +148,7 @@ class Transformer(keras.Model):
         self.input_type = input_type
 
         self.enc_input = TransformerInput(
-            input_type=input_type, nvocab=1000, nhid=64, maxlen=src_maxlen
+            input_type=input_type, nvocab=1000, nhid=nhid, maxlen=src_maxlen
         )
         self.dec_input = TransformerInput(
             input_type="tokens", nvocab=nclasses, nhid=nhid, maxlen=trg_maxlen
